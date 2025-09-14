@@ -13,17 +13,18 @@
             align-items: center;
 
             /* الخلفية */
-            background: url("WhatsApp Image 2025-09-09 at 6.34.52 PM.jpeg") no-repeat center center fixed;
+            background: url("WhatsApp Image 2025-09-09 at 6.34.52 PM.jpeg") no-repeat center center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
-        /* طبقة شفافية فوق الخلفية */
+        /* طبقة شفافية */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background-color: rgba(255, 255, 255, 0.7); /* عدلي الشفافية من 0.0 إلى 1 */
+            background-color: rgba(255, 255, 255, 0.7); 
             z-index: -1;
         }
 
@@ -39,7 +40,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 300px;
+            width: 90%; /* يضبط على الجوال */
+            max-width: 300px;
             padding: 15px 20px;
             margin-bottom: 10px;
             background-color: #f5a9bc;
@@ -56,6 +58,14 @@
             width: 24px;
             height: 24px;
             margin-left: 10px;
+        }
+
+        /* للجوالات */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll; /* أفضل للآيباد والجوال */
+                background-position: center top;
+            }
         }
     </style>
 </head>
