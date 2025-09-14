@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balloons & Beyond - 🎈بالون و أكثر</title>
     <style>
+        /* خلفية تغطي الشاشة بالكامل */
+        .background {
+            position: fixed;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("WhatsApp Image 2025-09-09 at 6.34.52 PM.jpeg") no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        /* طبقة شفافية */
+        .overlay {
+            position: fixed;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.7); 
+            z-index: -1;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            /* الخلفية */
-            background: url("WhatsApp Image 2025-09-09 at 6.34.52 PM.jpeg") no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        /* طبقة شفافية */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(255, 255, 255, 0.7); 
-            z-index: -1;
+            min-height: 100vh;
         }
 
         .logo-container {
@@ -40,7 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 90%; /* يضبط على الجوال */
+            width: 90%;
             max-width: 300px;
             padding: 15px 20px;
             margin-bottom: 10px;
@@ -59,17 +68,13 @@
             height: 24px;
             margin-left: 10px;
         }
-
-        /* للجوالات */
-        @media (max-width: 768px) {
-            body {
-                background-attachment: scroll; /* أفضل للآيباد والجوال */
-                background-position: center top;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- الخلفية -->
+    <div class="background"></div>
+    <div class="overlay"></div>
+
     <div class="logo-container">
         <img src="./B&B.jpeg" alt="شعار Balloons & Beyond" class="logo">
     </div>
