@@ -8,11 +8,25 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f8f8f8;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            /* الخلفية */
+            background: url("WhatsApp Image 2025-09-09 at 6.34.52 PM.jpeg") no-repeat center center fixed;
+            background-size: cover;
         }
+
+        /* طبقة شفافية فوق الخلفية */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* عدلي الشفافية من 0.0 إلى 1 */
+            z-index: -1;
+        }
+
         .logo-container {
             margin-bottom: 20px;
         }
@@ -56,7 +70,7 @@
 
     <a href="https://api.whatsapp.com/send?phone=966536299509" class="button">
         <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
-        <span>للاستفسار تواصل معنا عـبر الواتساب </span>
+        <span>تواصل معنا عبر واتساب</span>
     </a>
 
     <a href="https://www.instagram.com/balloons.and_beyond" class="button">
@@ -76,4 +90,3 @@
 
 </body>
 </html>
-
