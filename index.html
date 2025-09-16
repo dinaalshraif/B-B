@@ -38,7 +38,8 @@
         }
 
         .logo-container {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: center;
         }
         .logo {
             max-width: 150px;
@@ -46,36 +47,53 @@
             border-radius: 10px;
         }
 
+        /* أيقونات التواصل */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0 25px 0;
+        }
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
         /* أزرار شفافة بلون وردي */
         .button {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 90%;
-            max-width: 300px;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-            background-color: rgba(245, 169, 188, 0.6); /* وردي شفاف */
+            width: 80%;
+            max-width: 250px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: rgba(245, 169, 188, 0.8);
             color: white;
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
+            font-size: 14px;
             transition: background-color 0.3s ease;
-            backdrop-filter: blur(6px); /* تأثير زجاجي */
+            backdrop-filter: blur(6px);
         }
         .button:hover {
-            background-color: rgba(230, 138, 171, 0.9); /* أغمق عند المرور */
+            background-color: rgba(230, 138, 171, 0.9);
         }
 
         .button img {
-            width: 24px;
-            height: 24px;
-            margin-left: 10px;
+            width: 18px;
+            height: 18px;
+            margin-left: 6px;
         }
 
-        /* مسافة بين الأيقونة النصية والنص */
-        .icon {
-            margin-left: 10px;
+        /* مسافة بين أيقونة العربة والنص */
+        .button span {
+            margin-right: 6px;
         }
     </style>
 </head>
@@ -86,33 +104,32 @@
 
     <div class="logo-container">
         <img src="./B&B.jpeg" alt="شعار Balloons & Beyond" class="logo">
+
+        <!-- أيقونات التواصل -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/balloons.and_beyond">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@balloones.and_beyond">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=966536299509">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.snapchat.com/add/ballonbeyond">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/snapchat.png" alt="Snapchat">
+            </a>
+        </div>
     </div>
 
-
+    <!-- الأزرار -->
     <a href="https://salla.sa/balloons_beyond" class="button">
-        🛒<span>  الطلب عن طريق المتجر الإلكتروني</span>
+        🛒 <span>الطلب عن طريق المتجر الإلكتروني</span>
     </a>
-
-    <a href="https://api.whatsapp.com/send?phone=966536299509" class="button">
+	<a href="https://api.whatsapp.com/send?phone=966536299509" class="button">
         <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
-        <span>للاستفسار تواصل معنا عبر واتساب</span>
+        <span>للاستفسار تواصل معنا عن طريق الواتساب</span>
     </a>
-
-    <a href="https://www.instagram.com/balloons.and_beyond?igsh=MWpjMGZ6b2pvNXcwcg%3D%3D&utm_source=qr" class="button">
-        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
-        <span>حسابنا على إنستقرام</span>
-    </a>
-
-    <a href="https://www.tiktok.com/@balloones.and_beyond?_t=ZS-8zG0YluNQsk&_r=1" class="button">
-        <img src="https://img.icons8.com/color/48/tiktok--v1.png" alt="TikTok">
-        <span>حسابنا على تيك توك</span>
-    </a>
-
-    <a href="https://www.snapchat.com/add/ballonbeyond?share_id=h-zKsJ4GiIg&locale=en-GB" class="button">
-        <img src="https://img.icons8.com/color/48/snapchat--v1.png" alt="Snapchat">
-        <span>حسابنا على سناب شات</span>
-    </a>
-
 
 </body>
 </html>
